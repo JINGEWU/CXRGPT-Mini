@@ -1,18 +1,16 @@
-# SLaVA-CXR: Small Language and Vision Assistant for Chest X-ray Report Automation
-
-**SLaVA-CXR: Small Language and Vision Assistant for Chest X-ray Report Automation** [[Paper](https://arxiv.org/abs/2409.13321)] <br>
+# CXRGPT-Mini: A Lightweight Multimodal Foundation Model for Chest X-Ray
 
 ## Environment
 
 ```Shell
-conda create -n slava_cxr python=3.10 -y
-conda activate slava_cxr
+conda create -n cxrgpt_mini python=3.10 -y
+conda activate cxrgpt_mini
 pip install --upgrade pip  # enable PEP 660 support
 pip install -e .
 ```
 
 ## MODEL
-The SLaVA-CXR model can be downloaded in [HuggingFace](https://huggingface.co/bluesky333/SLaVA-CXR). 
+The trained CXRGPT-Mini model can be downloaded in [HuggingFace](https://huggingface.co/jinge/CXRGPT-Mini). 
 
 ## Train
 The training codes is made available. The training datasets are currently not available.
@@ -42,16 +40,6 @@ CUDA_VISIBLE_DEVICES=0 python -m llava_phi.eval.model_vqa_slava_cxr \
     --answers-file impression_result.jsonl \
     --conv-mode default \
     --max_new_tokens 256
-```
-## Citation
-```bibtex
-
-@article{wu2024slava,
-  title={SLaVA-CXR: Small Language and Vision Assistant for Chest X-ray Report Automation},
-  author={Wu, Jinge and Kim, Yunsoo and Shi, Daqian and Cliffton, David and Liu, Fenglin and Wu, Honghan},
-  journal={arXiv preprint arXiv:2409.13321},
-  year={2024}
-}
 ```
 
 ## Acknowledgement
